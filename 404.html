@@ -207,29 +207,39 @@
     <script src="js/main.js"></script>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
+
   let path = window.location.pathname;
 
-  // GitHub Pages project site fix
-  if (path.endsWith("/education/") || path.endsWith("/education")) {
-    path = "index.html";
-  } else {
-    path = path.substring(path.lastIndexOf("/") + 1);
+  // get current file name
+  let page = path.split("/").pop();
+
+  // project root (/education/)
+  if (page === "" || path.endsWith("/education/")) {
+    page = "index.html";
+  }
+
+  // 404 page → Home active
+  if (page === "404.html") {
+    page = "index.html";
   }
 
   document.querySelectorAll(".navbar-nav a").forEach(link => {
-    const href = link.getAttribute("href");
+    let href = link.getAttribute("href");
 
-    if (href === path) {
+    if (href === page) {
       link.classList.add("active");
 
-      const parent = link.closest(".dropdown");
-      if (parent) {
-        parent.querySelector(".nav-link").classList.add("active");
+      // dropdown parent active
+      let dropdown = link.closest(".dropdown");
+      if (dropdown) {
+        dropdown.querySelector(".nav-link").classList.add("active");
       }
     }
   });
+
 });
 </script>
+
 
 
 
@@ -237,5 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 </html>
+
 
 
