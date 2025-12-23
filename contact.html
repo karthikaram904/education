@@ -291,22 +291,43 @@
     <script src="js/main.js"></script>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const currentPath = window.location.pathname.replace("/", "") || "index";
 
-  document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-    let linkPath = link.getAttribute("href")
-      .replace(".html", "")
-      .replace("/", "");
+  let path = window.location.pathname;
 
-    if (linkPath === currentPath) {
+  // get current file name
+  let page = path.split("/").pop();
+
+  // project root (/education/)
+  if (page === "" || path.endsWith("/education/")) {
+    page = "index.html";
+  }
+
+  // 404 page → Home active
+  if (page === "404.html") {
+    page = "index.html";
+  }
+
+  document.querySelectorAll(".navbar-nav a").forEach(link => {
+    let href = link.getAttribute("href");
+
+    if (href === page) {
       link.classList.add("active");
+
+      // dropdown parent active
+      let dropdown = link.closest(".dropdown");
+      if (dropdown) {
+        dropdown.querySelector(".nav-link").classList.add("active");
+      }
     }
   });
+
 });
 </script>
+
 
 
 </body>
 
 
 </html>
+
