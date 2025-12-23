@@ -207,23 +207,35 @@
     <script src="js/main.js"></script>
     <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const currentPath = window.location.pathname.replace("/", "") || "index";
+  let path = window.location.pathname;
 
-  document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-    let linkPath = link.getAttribute("href")
-      .replace(".html", "")
-      .replace("/", "");
+  // GitHub Pages project site fix
+  if (path.endsWith("/education/") || path.endsWith("/education")) {
+    path = "index.html";
+  } else {
+    path = path.substring(path.lastIndexOf("/") + 1);
+  }
 
-    if (linkPath === currentPath) {
+  document.querySelectorAll(".navbar-nav a").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href === path) {
       link.classList.add("active");
+
+      const parent = link.closest(".dropdown");
+      if (parent) {
+        parent.querySelector(".nav-link").classList.add("active");
+      }
     }
   });
 });
 </script>
 
 
+
 </body>
 
 
 </html>
+
 
