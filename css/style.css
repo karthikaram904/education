@@ -10631,4 +10631,8 @@ body.rtl .text-end {
 #theme-toggle,#rtl-toggle {
   display: none !important;
 }
+  .btn.btn-primary.px-5.py-3.mr-3 {
+  margin-right: 0 !important;
+  margin-bottom: 20px;
+}
 }
