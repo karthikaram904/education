@@ -4262,7 +4262,12 @@ input[type="button"].btn-block {
     padding-left: 0;
   }
 }
-
+@media (min-width: 1024px) {
+  
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+}
 @media (min-width: 992px) {
   .navbar-expand-lg {
     flex-flow: row nowrap;
@@ -4286,9 +4291,7 @@ input[type="button"].btn-block {
     display: flex !important;
     flex-basis: auto;
   }
-  .navbar-expand-lg .navbar-toggler {
-    display: none;
-  }
+  
 }
 
 @media (max-width: 1199.98px) {
@@ -10637,21 +10640,4 @@ body.rtl .text-end {
 }
 }
 
-@media (max-width: 1024px) {
-  .navbar-collapse {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    z-index: 9999;
-  }
 
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .navbar-nav .nav-item {
-    margin: 10px 0;
-  }
-}
