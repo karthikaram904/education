@@ -4262,7 +4262,7 @@ input[type="button"].btn-block {
     padding-left: 0;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   
   .navbar-expand-lg .navbar-toggler {
     display: none;
