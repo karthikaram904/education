@@ -4262,12 +4262,7 @@ input[type="button"].btn-block {
     padding-left: 0;
   }
 }
-@media (min-width: 1025px) {
-  
-  .navbar-expand-lg .navbar-toggler {
-    display: none;
-  }
-}
+
 @media (min-width: 992px) {
   .navbar-expand-lg {
     flex-flow: row nowrap;
@@ -4291,7 +4286,9 @@ input[type="button"].btn-block {
     display: flex !important;
     flex-basis: auto;
   }
-  
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
 }
 
 @media (max-width: 1199.98px) {
