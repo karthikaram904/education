@@ -10636,3 +10636,22 @@ body.rtl .text-end {
   margin-bottom: 20px;
 }
 }
+
+@media (max-width: 1024px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+}
