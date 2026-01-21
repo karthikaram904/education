@@ -10707,3 +10707,6 @@ color:#fff;
 .dark .whowe-sec {
   background: none !important;
 }
+.dark .whowe-sec .info-box h4 {
+  color: #000;
+}
