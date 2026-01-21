@@ -10700,6 +10700,7 @@ body.rtl .text-end {
   display: none !important;
 }
 }
-
-
-
+.dark .navbar-light .navbar-nav .nav-link
+{
+color:#fff;
+}
