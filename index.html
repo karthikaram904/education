@@ -25,6 +25,65 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+    	/* HERO SECTION */
+.hero-section {
+  min-height: 90vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("img/header.jpg") center/cover no-repeat;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-subtitle span {
+  color: #0d6efd;
+}
+
+.hero-text {
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.hero-search {
+  max-width: 650px;
+}
+
+.hero-search .form-control {
+  height: 60px;
+  border: none;
+}
+
+.hero-search .btn {
+  height: 60px;
+  border-radius: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 2.8rem;
+  }
+}
+
+    </style>
 </head>
 
 <body>
@@ -114,31 +173,48 @@
     <!-- Navbar End -->
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
-        <div class="container text-center my-5 py-5">
-            <h1 class="text-white mt-4 mb-4">Learn From Home</h1>
-            <h1 class="text-white display-1 mb-5">Education Courses</h1>
-            <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Courses</button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Courses 1</a>
-                            <a class="dropdown-item" href="#">Courses 2</a>
-                            <a class="dropdown-item" href="#">Courses 3</a>
-                        </div>
-                    </div>
-                    <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Keyword">
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary px-4 px-lg-5">Search</button>
-                    </div>
-                </div>
-            </div>
+    <!-- Hero Start -->
+<div class="hero-section d-flex align-items-center">
+  <div class="container text-center">
+    <span class="badge badge-primary px-4 py-2 mb-3">
+      Learn Anytime • Anywhere
+    </span>
+
+    <h1 class="hero-title mt-4">
+      Learn From Home
+    </h1>
+
+    <h2 class="hero-subtitle mb-4">
+      Build Your Future With <span>Education Courses</span>
+    </h2>
+
+    <p class="hero-text mb-5">
+      Explore expert-led courses, gain practical skills, and grow your career with flexible online learning.
+    </p>
+
+    <div class="hero-search mx-auto">
+      <div class="input-group shadow">
+        <div class="input-group-prepend">
+          <button class="btn btn-light dropdown-toggle px-4" data-toggle="dropdown">
+            Courses
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Web Development</a>
+            <a class="dropdown-item" href="#">Design</a>
+            <a class="dropdown-item" href="#">Marketing</a>
+          </div>
         </div>
+        <input type="text" class="form-control" placeholder="Search your course...">
+        <div class="input-group-append">
+          <button class="btn btn-primary px-4 px-lg-5">
+            Search
+          </button>
+        </div>
+      </div>
     </div>
-    <!-- Header End -->
+  </div>
+</div>
+<!-- Hero End -->
 
 
     <!-- About Start -->
@@ -692,6 +768,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 </html>
+
 
 
 
